@@ -1,5 +1,3 @@
-# parcial-garage
+Sistema de Gestión de Garage
 
-Aplicación de Gestión Garage POO Java
-
-test
+Proyecto Java para administrar un sitemas de garage.
