@@ -1,3 +1,5 @@
+package garage;
+
 public abstract class Vehiculo implements Calculable, Mostrable {
 
     private String patente;

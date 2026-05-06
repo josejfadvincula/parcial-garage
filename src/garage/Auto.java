@@ -1,3 +1,5 @@
+package garage;
+
 public class Auto extends Vehiculo {
 
     public Auto(String patente, String marca, String modelo, int horasEstimadas) {
@@ -5,13 +7,14 @@ public class Auto extends Vehiculo {
     }
 
     public double calcularCosto() {
-        return 0;
+        return getHorasEstimadas() * 1000;
     }
 
     public int obtenerEspacios() {
-        return 0;
+        return 2;
     }
 
     public void mostrarDatos() {
+        System.out.println("Auto con patente: " + getPatente());
     }
 }
