@@ -4,10 +4,24 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Vehiculo v = new Auto("ABC123", "Ford", "Fiesta", 2);
+        Garage garage = new Garage(10);
 
-        System.out.println("Costo total:");
-        System.out.println(v.calcularCosto());
+        try {
+
+            Vehiculo v1 = new Auto("ABC123", "Ford", "Focus", 3);
+            Vehiculo v2 = new Moto("XYZ999", "Honda", "Wave", 2);
+
+            garage.ingresarVehiculo(v1);
+            garage.ingresarVehiculo(v2);
+
+            garage.listarVehiculos();
+
+            garage.mostrarEstado();
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e.getMessage());
+        }
 
     }
 
