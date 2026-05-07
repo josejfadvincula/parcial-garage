@@ -25,11 +25,20 @@ public class Main {
             System.out.println("5. Reportes");
             System.out.println("6. Salir");
 
-            System.out.print("Seleccione una opción: ");
-            opcion = sc.nextInt();
+            try {
 
-            sc.nextLine();
+                System.out.print("Seleccione una opción: ");
+                opcion = sc.nextInt();
 
+                sc.nextLine();
+            } catch (Exception e) {
+
+                System.out.println("Debe ingresar un número válido");
+
+                sc.nextLine();
+
+                opcion = 0;
+            }
             try {
 
                 if (opcion == 1) {
