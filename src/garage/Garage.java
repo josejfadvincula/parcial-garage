@@ -55,6 +55,29 @@ public class Garage {
         }
     }
 
+    public void retirarVehiculo(String patente)
+            throws VehiculoNoEncontradoException {
+
+        Vehiculo encontrado = null;
+
+        for (Vehiculo v : vehiculos) {
+
+            if (v.getPatente().equals(patente)) {
+                encontrado = v;
+            }
+        }
+
+        if (encontrado == null) {
+            throw new VehiculoNoEncontradoException("Vehículo no encontrado");
+        }
+
+        vehiculos.remove(encontrado);
+
+        System.out.println("Vehículo retirado correctamente");
+        encontrado.mostrarDatos();
+        System.out.println("Costo total: $" + encontrado.calcularCosto());
+    }
+
     public void mostrarEstado() {
 
         System.out.println("Capacidad total: " + capacidadMaxima);

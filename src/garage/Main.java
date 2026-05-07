@@ -14,8 +14,13 @@ public class Main {
             garage.ingresarVehiculo(v1);
             garage.ingresarVehiculo(v2);
 
+            System.out.println("\n=== VEHICULOS ===");
             garage.listarVehiculos();
 
+            System.out.println("\n=== RETIRO ===");
+            garage.retirarVehiculo("ABC123");
+
+            System.out.println("\n=== ESTADO ===");
             garage.mostrarEstado();
 
         } catch (Exception e) {
