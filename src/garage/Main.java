@@ -10,18 +10,13 @@ public class Main {
 
             Vehiculo v1 = new Auto("ABC123", "Ford", "Focus", 3);
             Vehiculo v2 = new Moto("XYZ999", "Honda", "Wave", 2);
+            Vehiculo v3 = new Camion("TRK111", "Iveco", "Cursor", 5);
 
             garage.ingresarVehiculo(v1);
             garage.ingresarVehiculo(v2);
+            garage.ingresarVehiculo(v3);
 
-            System.out.println("\n=== VEHICULOS ===");
-            garage.listarVehiculos();
-
-            System.out.println("\n=== RETIRO ===");
-            garage.retirarVehiculo("ABC123");
-
-            System.out.println("\n=== ESTADO ===");
-            garage.mostrarEstado();
+            garage.reportes();
 
         } catch (Exception e) {
 

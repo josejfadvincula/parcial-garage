@@ -78,6 +78,45 @@ public class Garage {
         System.out.println("Costo total: $" + encontrado.calcularCosto());
     }
 
+    public void reportes() {
+
+        int motos = 0;
+        int autos = 0;
+        int camiones = 0;
+
+        double recaudacion = 0;
+
+        for (Vehiculo v : vehiculos) {
+
+            recaudacion = recaudacion + v.calcularCosto();
+
+            if (v.obtenerEspacios() == 1) {
+                motos++;
+            }
+
+            if (v.obtenerEspacios() == 2) {
+                autos++;
+            }
+
+            if (v.obtenerEspacios() == 4) {
+                camiones++;
+            }
+        }
+
+        System.out.println("=== REPORTES ===");
+
+        System.out.println("Cantidad total de vehículos: " + vehiculos.size());
+
+        System.out.println("Cantidad de motos: " + motos);
+        System.out.println("Cantidad de autos: " + autos);
+        System.out.println("Cantidad de camiones: " + camiones);
+
+        System.out.println("Espacio ocupado: " + espacioOcupado());
+        System.out.println("Espacio libre: " + (capacidadMaxima - espacioOcupado()));
+
+        System.out.println("Recaudación estimada: $" + recaudacion);
+    }
+
     public void mostrarEstado() {
 
         System.out.println("Capacidad total: " + capacidadMaxima);
