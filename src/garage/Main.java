@@ -43,14 +43,41 @@ public class Main {
 
                 if (opcion == 1) {
 
-                    System.out.println("\n1. Moto");
-                    System.out.println("2. Auto");
-                    System.out.println("3. Camion");
+                    int tipo = -1;
 
-                    System.out.print("Seleccione tipo de vehículo: ");
-                    int tipo = sc.nextInt();
+                    while (true) {
 
-                    sc.nextLine();
+                        System.out.println("\n0. Volver");
+                        System.out.println("1. Moto");
+                        System.out.println("2. Auto");
+                        System.out.println("3. Camion");
+
+                        System.out.print("Seleccione tipo de vehículo: ");
+
+                        try {
+                            tipo = sc.nextInt();
+                            sc.nextLine();
+                        } catch (Exception e) {
+                            System.out.println("Debe ingresar un número válido");
+                            sc.nextLine();
+                            continue;
+                        }
+
+                        if (tipo == 0) {
+                            System.out.println("Volviendo al menú principal...");
+                            break;
+                        }
+
+                        if (tipo >= 1 && tipo <= 3) {
+                            break;
+                        }
+
+                        System.out.println("Opción inválida, intente nuevamente");
+                    }
+
+                    if (tipo == 0) {
+                        continue;
+                    }
 
                     System.out.print("Patente: ");
                     String patente = sc.nextLine();
