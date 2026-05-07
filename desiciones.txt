@@ -1,0 +1,15 @@
+Sistema de Gestión de Garage
+Decisiones de Diseño
+
+Durante el desarrollo del proyecto se buscó mantener una estructura simple, clara y organizada, aplicando los conceptos vistos en clase.
+
+Se utilizó una clase abstracta llamada Vehiculo para representar las características comunes de todos los vehículos, evitando repetir código en las subclases.
+
+Las clases Moto, Auto y Camion heredan de Vehiculo y cada una implementa su propio cálculo de costo y cantidad de espacios ocupados. De esta manera se aplicó herencia y polimorfismo.
+
+También se utilizaron interfaces para definir comportamientos comunes del sistema:
+- Calculable → para el cálculo de costos
+- Mostrable → para mostrar información de los vehículos
+
+Para almacenar los vehículos se utilizó un ArrayList, ya que permite agregar, eliminar y recorrer elementos de forma sencilla.
+
