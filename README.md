@@ -51,9 +51,10 @@ src/
 ```
 
 Ejecución
-1- Clonar el repositorio
-2- Abrir el proyecto en Eclipse
-3- Ejecutar la clase Main.java
+
+- Clonar el repositorio
+- Abrir el proyecto en Eclipse
+- Ejecutar la clase Main.java
 
 El sistema controla:
 
