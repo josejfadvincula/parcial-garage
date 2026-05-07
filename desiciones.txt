@@ -13,3 +13,14 @@ También se utilizaron interfaces para definir comportamientos comunes del siste
 
 Para almacenar los vehículos se utilizó un ArrayList, ya que permite agregar, eliminar y recorrer elementos de forma sencilla.
 
+El sistema incluye validaciones para evitar:
+- patentes duplicadas
+- horas inválidas
+- ingresos sin espacio disponible
+- retiro de vehículos inexistentes
+
+Los errores se manejan mediante excepciones personalizadas y bloques try-catch para evitar que el programa finalice inesperadamente.
+
+Se decidió implementar una interfaz por consola mediante un menú interactivo para facilitar el uso del sistema y permitir probar todas sus funcionalidades de forma simple.
+
+El proyecto fue desarrollado de manera incremental utilizando Git y GitHub para llevar control de versiones y registrar los avances realizados.
